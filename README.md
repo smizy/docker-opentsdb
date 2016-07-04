@@ -2,7 +2,7 @@
 
 opentsdb docker image
 
-## setup
+## Run server
 
 ```
 # load default env
@@ -28,3 +28,4 @@ docker ps --format {{.Names}} | xargs docker stats
 
 # check web ui
 open http://$(docker-machine ip default):4242
+```
