@@ -11,7 +11,7 @@ ENV OPENTSDB_LOG_DIR     /var/log/opentsdb
 ENV OPENTSDB_TMP_DIR     /tmp/opentsdb
 ENV OPENTSDB_ZK_QUORUM   zookeeper-1.vnet,zookeeper-2.vnet,zookeeper-3.vnet
 
-ENV HBASE_HOME               /usr/local/hbase-1.1.5
+ENV HBASE_HOME               /usr/local/hbase-1.2.2
 ENV HBASE_HMASTER1_HOSTNAME  hmaster-1.vnet
 
 ENV JAVA_HOME   /usr/lib/jvm/default-jvm
