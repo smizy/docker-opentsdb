@@ -19,7 +19,7 @@ runtime:
 test:
 	(docker network ls | grep vnet ) || docker network create vnet
 	regionserver=1 tsdb=1 ./make_docker_compose_yml.sh hdfs hbase tsdb \
-		| sed -E 's/(HADOOP|YARN)_HEAPSIZE=1000/\1_HEAPSIZE=600/g' \
+		| sed -E 's/(HADOOP|YARN)_HEAPSIZE=1000/\1_HEAPSIZE=300/g' \
 		> docker-compose.ci.yml.tmp
 	docker-compose -f docker-compose.ci.yml.tmp up -d 
 	docker-compose ps
