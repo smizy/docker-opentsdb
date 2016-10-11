@@ -7,7 +7,7 @@ services:
     container_name: tsdb-${i}
     networks: ["${network_name}"]
     hostname: tsdb-${i}.${network_name}
-    image: smizy/opentsdb:2.2-alpine
+    image: smizy/opentsdb:2.2.1-alpine
     ports: 
       - 4242:4242
     environment:

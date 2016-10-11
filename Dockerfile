@@ -1,7 +1,21 @@
 FROM alpine:3.4
 MAINTAINER smizy
 
-ENV OPENTSDB_VERSION     2.2.0
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+
+LABEL \
+    org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.docker.dockerfile="/Dockerfile" \
+    org.label-schema.license="Apache License 2.0" \
+    org.label-schema.name="smizy/hbase" \
+    org.label-schema.url="https://github.com/smizy" \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-type="Git" \
+    org.label-schema.vcs-url="https://github.com/smizy/docker-opentsdb"
+
+ENV OPENTSDB_VERSION     ${VERSION}
 ENV OPENTSDB_SRC_DIR     /usr/local/opentsdb-${OPENTSDB_VERSION}
 ENV OPENTSDB_HOME        /usr/share/opentsdb
 ENV OPENTSDB_CONF_DIR    ${OPENTSDB_HOME}/etc/opentsdb
@@ -11,7 +25,7 @@ ENV OPENTSDB_LOG_DIR     /var/log/opentsdb
 ENV OPENTSDB_TMP_DIR     /tmp/opentsdb
 ENV OPENTSDB_ZK_QUORUM   zookeeper-1.vnet,zookeeper-2.vnet,zookeeper-3.vnet
 
-ENV HBASE_HOME               /usr/local/hbase-1.2.2
+ENV HBASE_HOME               /usr/local/hbase-1.2.3
 ENV HBASE_HMASTER1_HOSTNAME  hmaster-1.vnet
 
 ENV JAVA_HOME   /usr/lib/jvm/default-jvm

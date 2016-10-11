@@ -36,6 +36,10 @@ done
 if [ "$1" == "tsdb" ]; then
     shift
     
+    if [[ "$1" == "version" ]]; then
+        exec su-exec tsdb tsdb version
+    fi
+
     wait_until ${HBASE_HMASTER1_HOSTNAME} 16000 
     
     if [[ "$1" == "tsd" && "$2" == "" ]]; then

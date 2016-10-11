@@ -1,6 +1,9 @@
 # docker-opentsdb
+[![](https://images.microbadger.com/badges/image/smizy/opentsdb:2.2.1-alpine.svg)](https://microbadger.com/images/smizy/opentsdb:2.2.1-alpine "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/smizy/opentsdb:2.2.1-alpine.svg)](https://microbadger.com/images/smizy/opentsdb:2.2.1-alpine "Get your own version badge on microbadger.com")
+[![CircleCI](https://circleci.com/gh/smizy/docker-opentsdb.svg?style=svg&circle-token=03e3d264901a60ed454a2c296b3d243ad6f53305)](https://circleci.com/gh/smizy/docker-opentsdb)
 
-opentsdb docker image
+OpenTSDB docker image based on alpine
 
 ## Run server
 
@@ -29,3 +32,11 @@ docker ps --format {{.Names}} | xargs docker stats
 # check web ui
 open http://$(docker-machine ip default):4242
 ```
+
+## Licenses
+* Apache License 2.0
+
+### mustache.sh License
+* BSD License. See LICENSE.mustache.
+* Source: https://github.com/rcrowley/mustache.sh
+* Copyright 2011 Richard Crowley. All rights reserved.
