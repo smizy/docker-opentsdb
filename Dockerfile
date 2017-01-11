@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.5
 MAINTAINER smizy
 
 ARG BUILD_DATE
@@ -25,7 +25,7 @@ ENV OPENTSDB_LOG_DIR     /var/log/opentsdb
 ENV OPENTSDB_TMP_DIR     /tmp/opentsdb
 ENV OPENTSDB_ZK_QUORUM   zookeeper-1.vnet,zookeeper-2.vnet,zookeeper-3.vnet
 
-ENV HBASE_HOME               /usr/local/hbase-1.2.3
+ENV HBASE_HOME               /usr/local/hbase-1.2.4
 ENV HBASE_HMASTER1_HOSTNAME  hmaster-1.vnet
 
 ENV JAVA_HOME   /usr/lib/jvm/default-jvm
@@ -39,7 +39,7 @@ RUN set -x \
         su-exec \
         wget \
     && apk --no-cache add \
-        --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing/ \
+        --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ \
         gnuplot \
     && wget -q -O - https://github.com/OpenTSDB/opentsdb/releases/download/v${OPENTSDB_VERSION}/opentsdb-${OPENTSDB_VERSION}.tar.gz  \
         | tar -xzf - -C /usr/local 

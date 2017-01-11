@@ -1,6 +1,6 @@
 # docker-opentsdb
-[![](https://images.microbadger.com/badges/image/smizy/opentsdb:2.2.1-alpine.svg)](https://microbadger.com/images/smizy/opentsdb:2.2.1-alpine "Get your own version badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/smizy/opentsdb:2.2.1-alpine.svg)](https://microbadger.com/images/smizy/opentsdb:2.2.1-alpine "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/smizy/opentsdb:2.2.2-alpine.svg)](https://microbadger.com/images/smizy/opentsdb:2.2.2-alpine "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/smizy/opentsdb:2.2.2-alpine.svg)](https://microbadger.com/images/smizy/opentsdb:2.2.2-alpine "Get your own version badge on microbadger.com")
 [![CircleCI](https://circleci.com/gh/smizy/docker-opentsdb.svg?style=svg&circle-token=03e3d264901a60ed454a2c296b3d243ad6f53305)](https://circleci.com/gh/smizy/docker-opentsdb)
 
 OpenTSDB docker image based on alpine
